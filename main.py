@@ -15,10 +15,13 @@ async def on_message(message):
     if message.author == client.user:
         return 
 
-    if message.author.id == 249544257285652480:
-        await message.add_reaction('🇳')
-        await message.add_reaction('🇪')
-        await message.add_reaction('🇷')
-        await message.add_reaction('🇩')
+    nerd1 = os.getenv('NERD1')
+    nerd2 = os.getenv('NERD2')
+
+    if  str(message.author.id) == nerd1 or str(message.author.id) == nerd2:
+         await message.add_reaction('🇳')
+         await message.add_reaction('🇪')
+         await message.add_reaction('🇷')
+         await message.add_reaction('🇩')
 
 client.run(os.getenv('TOKEN'))        
