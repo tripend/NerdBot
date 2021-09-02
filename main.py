@@ -16,6 +16,9 @@ async def on_message(message):
         return 
 
     if message.author.id == 249544257285652480:
-        await message.channel.send('Nerd')
+        await message.add_reaction('🇳')
+        await message.add_reaction('🇪')
+        await message.add_reaction('🇷')
+        await message.add_reaction('🇩')
 
 client.run(os.getenv('TOKEN'))        
